@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio">
+
+    <title>Burhan Ahmad Portfolio | Full Stack Web-Developer</title>
+
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/responsive.css"> 
+</head>
+
+<body>
+    <div class="container" id="Home">
+        <header>
+            <div class="header">
+                <nav class="navbar">
+                    <div class="side-bar-icon" onclick="sideBarShow()">
+                        <img src="icons/menu-icon.svg" width="25px" alt="">
+                    </div>
+                    <ul class="nav-btns">
+                        <li><a href="#Home" name="" title="Home Page">Home</a></li>
+                        <li><a href="#About" title="About Page">About</a></li>
+                        <li><a href="#Skill" title="Skill Page">Skills</a></li>
+                        <li><a href="#Project" title="Project Page">Projects</a></li>
+                        <li><a href="#Contact" title="Contact Page">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="side-bar" id="sBar">
+                    <div class="side-bar-icon" onclick="sideBarHide()">
+                        <img src="icons/cross-icon.svg" width="25px" alt="">
+                    </div>
+                    <ul class="nav-btns">
+                        <li><a href="#Home" name="" title="Home Page">Home</a></li>
+                        <li><a href="#About" title="About Page">About</a></li>
+                        <li><a href="#Skill" title="Skill Page">Skills</a></li>
+                        <li><a href="#Project" title="Project Page">Projects</a></li>
+                        <li><a href="#Contact" title="Contact Page">Contact</a></li>
+                    </ul>
+
+                    <ul class="social-icons">
+                        <a href=""><img src="icons/github.svg" alt=""></a>
+                        <a href=""><img src="icons/insta-icon.svg" alt=""></a>
+                        <a href=""><img src="icons/fb-icon.svg" alt=""></a>
+                    </ul>
+                </div>
+
+                <div class="nav-body">
+                    <div class="text-box">
+                        <h1>Hi, I'm <br><span>Burhan Ahmad</span></h1>
+                        <h3>I'm A Full Stack Web-Developer Based In Pakistan.</h3>
+
+                        <a class="btn" href="cv/Burhan-Ahmad-Resume.pdf" download="cv/Burhan-Ahmad-Resume.pdf" title="Download Resume">Read More</a>
+                    </div>
+
+                    <div class="img-box">
+                        <img src="img/profile-img.jpg" width="350px" alt="Profile Image">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="about-section" id="About">
+            <h1>About</h1>
+            <div class="aboutText">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id soluta voluptatem mollitia sequi recusandae beatae quidem repellat! Cum consequuntur id, ut qui sunt soluta pariatur natus itaque eveniet dicta cumque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, labore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ab rerum esse accusantium eligendi. Delectus!</p>
+            </div>
+        </section>
+        
+        <section class="skill-section" id="Skill">
+            <h1>Skills</h1>
+            <div class="about-body">
+                <div class="text-box">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas recusandae labore tempore, est ipsa nam voluptatibus placeat voluptatem facere numquam cum inventore! Fugit quaerat repudiandae ex minima corrupti sequi, non ipsam delectus vitae magnam. Reiciendis repellendus maiores in cumque possimus porro omnis iste deleniti molestias!</p>
+                </div>
+                <div class="icon-box">
+                    <div class="slide"><img src="icons/html.svg" alt="Image 2"></div>
+                    <div class="slide"><img src="icons/css.svg" alt="Image 1"></div>
+                    <div class="slide"><img src="icons/js.svg" alt="Image 3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section" id="Project">
+            <h1>Projects</h1>
+            <div class="projects">
+                
+            </div>
+        </section>
+
+        <section class="client-reviews">
+            <h1>Client Reviews</h1>
+            <div class="reviews">
+                <!-- <div class="review-card">
+                    <div class="rev-stars">
+                        <strong class="fa fa-star"></strong>
+                        <strong class="fa fa-star"></strong>
+                        <strong class="fa fa-star"></strong>
+                        <strong class="fa fa-star"></strong>
+                        <strong class="fa fa-star"></strong>
+                    </div>
+                    <div class="descp">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aspernatur molestias aperiam consectetur ex! Rerum iure magnam, ullam molestiae maiores nostrum. Libero esse aperiam molestiae laboriosam soluta, accusamus facilis incidunt.</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="photo">
+                            <img src="img/logo.png" width="50px" alt="">
+                        </div>
+                        <div class="name">
+                            <h4>Company</h4>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="trusted-by">
+            <h1>Trusted By</h1>
+            <div class="company-logo">
+                <img src="img/trusted-by-img1.png" alt="">
+                <img src="img/trusted-by-img2.png" alt="">
+                <img src="img/trusted-by-img3.png" alt="">
+            </div>
+        </section>
+      
+        <footer class="footer">
+            <div class="contact-form" id="Contact">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="cmnt">Enquiry</label>
+                        <textarea class="form-control" id="cmnt" placeholder="Write Here" rows="3"></textarea>
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+            <div class="cpyrght">
+                <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
