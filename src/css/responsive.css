@@ -1,23 +1,23 @@
 @media (max-width: 1136px) {
-    
-    .container .header{
+
+    .container .header {
         height: 500px;
     }
-    
+
     .container .nav-body {
         margin-top: 75px;
         height: 95vh;
     }
 
-    .container .nav-body .text-box{
+    .container .nav-body .text-box {
         height: 100%;
     }
 
-    .container .nav-body .text-box h1{
+    .container .nav-body .text-box h1 {
         font-size: 35px;
     }
 
-    .container .nav-body .text-box h1 span{
+    .container .nav-body .text-box h1 span {
         font-size: 45px;
     }
 
@@ -25,11 +25,11 @@
         font-size: 17px;
     }
 
-    .container .nav-body .img-box{
+    .container .nav-body .img-box {
         height: 75%;
     }
 
-    .container .nav-body .img-box img{
+    .container .nav-body .img-box img {
         width: 275px;
     }
 
@@ -40,12 +40,12 @@
         padding: 32px 0;
     }
 
-    .container .about-section h1{
+    .container .about-section h1 {
         margin-top: 0;
         margin-bottom: 25px;
     }
 
-    .container .about-section .aboutText p{
+    .container .about-section .aboutText p {
         width: 60vw;
     }
 
@@ -62,29 +62,29 @@
     .container .skill-section h1 {
         margin: 23px 0;
     }
-    
+
     .container .skill-section .about-body {
         gap: 200px;
         margin-top: 5px;
         margin-bottom: 35px;
     }
 
-    .container .skill-section .about-body p{
+    .container .skill-section .about-body p {
         width: 45vw;
     }
 
 
 
 
-    .container .project-section{
+    .container .project-section {
         flex-direction: column;
     }
 
-    .container h1{
+    .container h1 {
         margin: 50px 0;
     }
 
-    .container .project-section .projects{
+    .container .project-section .projects {
         margin-top: -25px;
     }
 
@@ -110,11 +110,11 @@
         gap: 15px;
     }
 
-    .container .nav-body .text-box h1{
+    .container .nav-body .text-box h1 {
         font-size: 30px;
     }
 
-    .container .nav-body .text-box h1 span{
+    .container .nav-body .text-box h1 span {
         font-size: 40px;
     }
 
@@ -127,7 +127,7 @@
         gap: 50px;
     }
 
-    .container .trusted-by .company-logo img{
+    .container .trusted-by .company-logo img {
         width: 175px;
     }
 
@@ -138,11 +138,11 @@
 
 @media (max-width: 815px) {
 
-    .container .nav-body .text-box h1{
+    .container .nav-body .text-box h1 {
         font-size: 25px;
     }
 
-    .container .nav-body .text-box h1 span{
+    .container .nav-body .text-box h1 span {
         font-size: 30px;
     }
 
@@ -150,7 +150,7 @@
         gap: 25px;
     }
 
-    .container .about-section .aboutText p{
+    .container .about-section .aboutText p {
         width: 75vw;
         font-size: 17px;
     }
@@ -174,7 +174,7 @@
 
 @media (max-width: 660px) {
 
-    .container .header{
+    .container .header {
         height: 450px;
     }
 
@@ -190,11 +190,11 @@
         display: none;
     }
 
-    .container .nav-body .text-box h1{
+    .container .nav-body .text-box h1 {
         font-size: 35px;
     }
 
-    .container .nav-body .text-box h1 span{
+    .container .nav-body .text-box h1 span {
         font-size: 40px;
     }
 
@@ -220,7 +220,7 @@
         width: 61vw;
     }
 
-    .container .project-section .projects{
+    .container .project-section .projects {
         flex-direction: column;
     }
 
@@ -228,7 +228,12 @@
         margin: 17px 0;
     }
 
-    .container .trusted-by .company-logo{
+    .container .skill-section .about-body .text-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .trusted-by .company-logo {
         flex-direction: column;
     }
 
@@ -237,11 +242,11 @@
 
 @media (max-width: 560px) {
 
-    .container .nav-body .text-box h1{
+    .container .nav-body .text-box h1 {
         font-size: 27px;
     }
 
-    .container .nav-body .text-box h1 span{
+    .container .nav-body .text-box h1 span {
         font-size: 30px;
     }
 
@@ -253,7 +258,7 @@
         display: none;
     }
 
-    .container .header .navbar .side-bar-icon img{
+    .container .header .navbar .side-bar-icon img {
         display: inline;
     }
 
@@ -288,7 +293,7 @@
         margin: 0px auto;
     }
 
-    .container .trusted-by h1{
+    .container .trusted-by h1 {
         font-size: 30px;
     }
 

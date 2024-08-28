@@ -6,7 +6,7 @@ function projectCard() {
     for (let index = 0; index < projectTitle.length; index++) {
         let projectBox_card = `<div class="card">
                             <div class="thumbnail">
-                                <img src="/img/cardCover.jpg" alt="">
+                                <img src="/src/img/cardCover.jpg" alt="">
                             </div>
 
                             <div class="cardText">

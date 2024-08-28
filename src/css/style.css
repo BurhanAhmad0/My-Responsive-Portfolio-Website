@@ -16,7 +16,7 @@ html{
 }
 
 ::-webkit-scrollbar-track {
-    background: #d2691e;
+    background: var(--primary-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -30,10 +30,15 @@ html{
 :root {
     --nav-btn-font: "Montserrat";
     --main-upper-body-font: "Ubuntu";
+
+    --primary-color: #d2691e;
+    --secondary-color: #deb887;
+    --btn-color: #f14e59;
+    --main-text-color: #ffff00;
+    --footer-color: #fff5e6;
 }
 
 .container .header {
-    height: 100%;
     background-image: url(../img/bg-img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -81,7 +86,7 @@ html{
     font-family: var(--nav-btn-font);
     display: none;
     transform: translateX(-100%);
-    transition: 2s ease-in-out;
+    transition: 1s ease-in-out;
     background-color: rgba(160, 82, 45, 1.5);
 }
 
@@ -118,17 +123,17 @@ html{
     color: whitesmoke;
     font-weight: 500;
     font-family: var(--nav-btn-font);
-}
 
-.container .header .side-bar .nav-btns li a:hover {
-    background-color: transparent;
-    border-bottom: 2px solid #f14e59;
-    color: #f14e59;
-    font-weight: 600;
-    border-radius: 7px;
-    padding: 4px;
-    cursor: pointer;
-    transition: all 0.5s ease-in;
+    &:hover {
+        background-color: transparent;
+        border-bottom: 2px solid var(--btn-color);
+        color: var(--btn-color);
+        font-weight: 600;
+        border-radius: 7px;
+        padding: 4px;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+    }
 }
 
 .container .header .navbar .nav-btns {
@@ -148,17 +153,17 @@ html{
     font-weight: 500;
     font-family: var(--nav-btn-font);
     font-size: 17px;
-}
 
-.container .header .navbar .nav-btns li a:hover {
-    background-color: transparent;
-    border-bottom: 2px solid #f14e59;
-    color: #f14e59;
-    font-weight: 600;
-    border-radius: 7px;
-    padding: 4px;
-    cursor: pointer;
-    transition: all 0.5s ease-in;
+    &:hover {
+        background-color: transparent;
+        border-bottom: 2px solid var(--btn-color);
+        color: var(--btn-color);
+        font-weight: 600;
+        border-radius: 7px;
+        padding: 4px;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+    }
 }
 
 
@@ -169,10 +174,10 @@ html{
 
 .container .nav-body {
     display: flex;
+    padding: 0 37px;
     justify-content: space-around;
     align-items: center;
     height: 89vh;
-    /* border: 2px solid rebeccapurple; */
 }
 
 .container .nav-body .text-box {
@@ -202,22 +207,17 @@ html{
     border-radius: 7px;
     border: none;
     margin-top: 15px;
-    background-color: #f14e59;
+    background-color: var(--btn-color);
     color: whitesmoke;
     font-family: var(--nav-btn-font);
 }
 
-.container .nav-body .text-box .btn:hover {
-    border: 2px solid #f14e59;
-    background-color: transparent;
-    color: #f14e59;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.5s ease-in;
-}
-
 .container .nav-body .img-box {
-    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding-bottom: 25px;
 }
 
 .container .nav-body .img-box img {
@@ -246,15 +246,19 @@ html{
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    padding: 37px 0;
-    gap: 15px;
-    /* border: 2px solid black; */
+    padding: 75px 0;
+    gap: 30px;
 }
 
 .container .about-section h1{
     font-size: 60px;
     margin: 0;
     font-family: var(--main-upper-body-font);
+}
+
+.container .about-section .aboutText {
+    width: 76%;
+    text-align: center;
 }
 
 .container .about-section .aboutText p {
@@ -282,8 +286,8 @@ html{
     align-items: center;
     flex-direction: column;
     height: 100%;
-    padding: 35px 0;
-    gap: 15px;
+    padding: 60px 0;
+    gap: 30px;
     border-top: 5px solid burlywood;
 }
 
@@ -295,16 +299,25 @@ html{
 
 .container .skill-section .about-body {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 72px;
     width: 75vw;
     align-items: center;
 }
 
 .container .skill-section .about-body .text-box {
-    width: 37vw;
+    width: 63%;
     font-size: 20px;
+    text-align: start;
     font-family: var(--nav-btn-font);
+}
+
+.container .skill-section .about-body .text-box p {
+    margin-top: 40px;
+}
+
+.container .skill-section .about-body .text-box p span {
+    font-weight: bold;
 }
 
 .skill-section .icon-box {
@@ -366,6 +379,8 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 45px 0;
+    gap: 30px;
     flex-direction: column;
 }
 
@@ -428,7 +443,8 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 45px;
+    padding: 75px;
+    gap: 25px;
     flex-direction: column;
     border-top: 5px solid burlywood;
 }
@@ -465,8 +481,11 @@ html{
     font-size: 23px;
 }
 
-.container .client-reviews .reviews .review-card .rev-stars .fa-star:before {
-    content: "\2605";
+.container .client-reviews .reviews .review-card .rev-stars .fa-star{
+
+    &:before {
+        content: "\2605";
+    }
 }
 
 .container .client-reviews .reviews .review-card .descp{
@@ -512,8 +531,8 @@ html{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px;
-    gap: 25px;
+    padding: 75px 0;
+    gap: 35px;
     border-top: 5px solid burlywood;
 }
 
@@ -568,6 +587,16 @@ html{
     margin-bottom: 33px;
 }
 
+.container .footer .contact-form .form-group .form-control {
+    outline: none;
+    margin-top: 5px;
+    transition: 0.5s all;
+
+    &:focus{
+        box-shadow: var() 0px 0px 0px 3px;
+    }
+}
+
 .container .footer .contact-form label {
     margin-bottom: 10px;
     color: black;
@@ -585,9 +614,12 @@ html{
     font-family: 'Courier New', Courier, monospace;
 }
 
-.container .footer .contact-form input[type="email"]::placeholder,
-.container .footer .contact-form textarea::placeholder {
-    color: gray;
+.container .footer .contact-form input[type="email"],
+.container .footer .contact-form textarea{
+
+    &::placeholder {
+        color: gray;
+    }
 }
 
 .container .footer .contact-form .form-text {
@@ -597,21 +629,21 @@ html{
 
 .container .footer .contact-form button {
     padding: 10px 15px;
-    background-color: #d2691e;
+    background-color: var(--primary-color);
     border: none;
     border-radius: 5px;
     color: #ffffff;
     font-size: 16px;
     cursor: pointer;
-}
 
-.container .footer .contact-form button:hover {
-    border: 1px solid #d2691e;
-    background-color: transparent;
-    color: #d2691e;
-    font-weight: 300;
-    cursor: pointer;
-    transition: all 0.5s ease-in;
+    &:hover {
+        border: 1px solid var(--primary-color);
+        background-color: transparent;
+        color: var(--primary-color);
+        font-weight: 300;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+    }
 }
 
 
@@ -620,7 +652,7 @@ html{
 
 /* Copyright Section */
 .container .footer .cpyrght {
-    background-color: #fff5e6;
+    background-color: var(--footer-color);
     padding: 20px;
     text-align: center;
     border-top: 1px solid #d2b48c;
