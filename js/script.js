@@ -5,15 +5,26 @@ function projectCard() {
     let projectBox = document.querySelector('.projects');
     for (let index = 0; index < projectTitle.length; index++) {
         let projectBox_card = `<div class="card">
-                            <div class="thumbnail">
-                                <img src="img/cardCover.jpg" alt="">
-                            </div>
+                                    <div class="thumbnail">
+                                        <img src="img/cardCover.jpg" alt="">
+                                    </div>
 
-                            <div class="cardText">
-                                <h2>${projectTitle[index]}</h2>
-                                <p>${projectDescp[index]}</p>
-                            </div>
-                        </div>`;
+                                    <div class="cardText">
+                                        <h2>${projectTitle[index]}</h2>
+                                        <p>${projectDescp[index]}</p>
+                                    </div>
+
+                                    <div class="card-btns">
+                                        <div class="preview">
+                                            <span>Preview</span>
+                                            <img src="icons/preview.svg" width="20px" alt="Preview">
+                                        </div>
+                                        <div class="code">
+                                            <span>Code</span>
+                                            <img class="invert" src="icons/github.svg" alt="Code">
+                                        </div>
+                                    </div>
+                                </div>`;
 
         projectBox.innerHTML = projectBox.innerHTML + projectBox_card;
     }

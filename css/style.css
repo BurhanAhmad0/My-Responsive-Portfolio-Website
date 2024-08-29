@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -38,6 +38,11 @@ html{
     --footer-color: #fff5e6;
 }
 
+/* Utility Class */
+.invert{
+    filter: invert(1);
+}
+
 .container .header {
     background-image: url(../img/bg-img.jpg);
     background-size: cover;
@@ -46,17 +51,17 @@ html{
     flex-direction: column;
 }
 
-.container .header .navbar{
+.container .header .navbar {
     display: flex;
     justify-content: space-between;
     position: relative;
 }
 
-.container .header .navbar.sticky{
+.container .header .navbar.sticky {
     background-color: #a0522d;
 }
 
-.container .header .navbar .side-bar-icon img{
+.container .header .navbar .side-bar-icon img {
     width: 40px;
     position: relative;
     left: 7px;
@@ -65,12 +70,12 @@ html{
     display: none;
 }
 
-.container .header .side-bar .side-bar-icon{
+.container .header .side-bar .side-bar-icon {
     display: flex;
     justify-content: end;
 }
 
-.container .header .side-bar .side-bar-icon img{
+.container .header .side-bar .side-bar-icon img {
     width: 30px;
     position: relative;
     right: 7px;
@@ -250,7 +255,7 @@ html{
     gap: 30px;
 }
 
-.container .about-section h1{
+.container .about-section h1 {
     font-size: 60px;
     margin: 0;
     font-family: var(--main-upper-body-font);
@@ -374,7 +379,7 @@ html{
 
 /* Project Section */
 
-.container .project-section{
+.container .project-section {
     border-top: 5px solid burlywood;
     display: flex;
     justify-content: center;
@@ -384,13 +389,13 @@ html{
     flex-direction: column;
 }
 
-.container h1{
+.container h1 {
     font-family: var(--main-upper-body-font);
     font-size: 60px;
     margin: 25px 0;
 }
 
-.container .project-section .projects{
+.container .project-section .projects {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -399,35 +404,75 @@ html{
     /* border: 2px solid red; */
 }
 
-.container .project-section .projects .card{
+.container .project-section .projects .card {
     border: 2px solid #cd853f;
     width: 200px;
     height: 260px;
     padding: 17px;
+    cursor: pointer;
     border-radius: 10px;
+    transition: all 0.5s;
+
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
 }
 
-.container .project-section .projects .card .thumbnail{
+.container .project-section .projects .card .thumbnail {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container .project-section .projects .card .thumbnail img{
+.container .project-section .projects .card .thumbnail img {
     width: 175px;
     border-radius: 7px;
 }
 
-.container .project-section .projects .card .cardText h2{
+.container .project-section .projects .card .cardText {
+    height: 47%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container .project-section .projects .card .cardText h2 {
     font-size: 22px;
     margin: 5px 0;
     font-family: var(--main-upper-body-font);
 }
 
-.container .project-section .projects .card .cardText p{
+.container .project-section .projects .card .cardText p {
     font-size: 14px;
     font-family: var(--nav-btn-font);
 }
+
+.container .project-section .projects .card .card-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    gap: 7px;
+    font-family: var(--main-upper-body-font);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container .project-section .projects .card .card-btns .preview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container .project-section .projects .card .card-btns .code{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
 
 
 
@@ -439,7 +484,7 @@ html{
 
 /* Client Reviews Section */
 
-.container .client-reviews{
+.container .client-reviews {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -449,11 +494,11 @@ html{
     border-top: 5px solid burlywood;
 }
 
-.container .client-reviews h1{
+.container .client-reviews h1 {
     margin-top: -20px;
 }
 
-.container .client-reviews .reviews{
+.container .client-reviews .reviews {
     width: 100%;
     height: 100%;
     display: grid;
@@ -464,14 +509,14 @@ html{
     gap: 25px;
 }
 
-.container .client-reviews .reviews .review-card{
+.container .client-reviews .reviews .review-card {
     width: 100%;
     background-color: #d79c61;
     border-radius: 7px;
     padding: 25px;
 }
 
-.container .client-reviews .reviews .review-card .rev-stars{
+.container .client-reviews .reviews .review-card .rev-stars {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -481,14 +526,14 @@ html{
     font-size: 23px;
 }
 
-.container .client-reviews .reviews .review-card .rev-stars .fa-star{
+.container .client-reviews .reviews .review-card .rev-stars .fa-star {
 
     &:before {
         content: "\2605";
     }
 }
 
-.container .client-reviews .reviews .review-card .descp{
+.container .client-reviews .reviews .review-card .descp {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -502,7 +547,8 @@ html{
     margin-top: 25px;
 }
 
-.container .client-reviews .reviews .review-card .client-info .photo, .name{
+.container .client-reviews .reviews .review-card .client-info .photo,
+.name {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -510,7 +556,7 @@ html{
     font-family: var(--nav-btn-font);
 }
 
-.container .client-reviews .reviews .review-card .client-info .name{
+.container .client-reviews .reviews .review-card .client-info .name {
     margin-top: 10px;
     color: whitesmoke;
 }
@@ -526,7 +572,7 @@ html{
 
 /* Trusted By Section */
 
-.container .trusted-by{
+.container .trusted-by {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -536,18 +582,18 @@ html{
     border-top: 5px solid burlywood;
 }
 
-.container .trusted-by h1{
+.container .trusted-by h1 {
     margin-top: 0;
 }
 
-.container .trusted-by .company-logo{
+.container .trusted-by .company-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 55px;
 }
 
-.container .trusted-by .company-logo img{
+.container .trusted-by .company-logo img {
     width: 260px;
 }
 
@@ -592,7 +638,7 @@ html{
     margin-top: 5px;
     transition: 0.5s all;
 
-    &:focus{
+    &:focus {
         box-shadow: var() 0px 0px 0px 3px;
     }
 }
@@ -615,7 +661,7 @@ html{
 }
 
 .container .footer .contact-form input[type="email"],
-.container .footer .contact-form textarea{
+.container .footer .contact-form textarea {
 
     &::placeholder {
         color: gray;
@@ -655,7 +701,14 @@ html{
     background-color: var(--footer-color);
     padding: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     border-top: 1px solid #d2b48c;
+}
+
+.container .footer .cpyrght .social-icons a img {
+    margin: 0 7px;
 }
 
 .container .footer .cpyrght p {
