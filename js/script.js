@@ -27,6 +27,13 @@ function projectCard() {
                                 </div>`;
 
         projectBox.innerHTML = projectBox.innerHTML + projectBox_card;
+
+        let card = Array.from(document.querySelectorAll('.card'));
+        card.forEach(element => {
+            element.addEventListener('click', () => {
+                window.open('https://github.com/BurhanAhmad0/My-Responsive-Portfolio-Website', '_blank');
+            })
+        });
     }
 }
 

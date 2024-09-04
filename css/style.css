@@ -44,11 +44,11 @@ html {
 }
 
 .container .header {
-    background-image: url(../img/bg-img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    background-image: url(../img//bg-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container .header .navbar {
@@ -315,6 +315,10 @@ html {
     font-size: 20px;
     text-align: start;
     font-family: var(--nav-btn-font);
+    animation: appearX1 linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+    transition: all 0.5s;
 }
 
 .container .skill-section .about-body .text-box p {
@@ -330,6 +334,10 @@ html {
     width: 200px;
     height: 200px;
     overflow: hidden;
+    animation: appearX2 linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+    transition: all 0.5s;
 }
 
 .skill-section .icon-box .slide {
@@ -365,6 +373,36 @@ html {
         transform: translateX(0%);
     }
 }
+
+@keyframes appearX1 {
+    from{
+        opacity: 0;
+        transform: translateX(-25%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes appearX2 {
+    from{
+        opacity: 0;
+        transform: translateX(25%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -411,10 +449,27 @@ html {
     padding: 17px;
     cursor: pointer;
     border-radius: 10px;
+    animation: appearVert linear;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
     transition: all 0.5s;
 
     &:hover{
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+}
+
+@keyframes appearVert {
+    from{
+        opacity: 0;
+        transform: translateY(25%);
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+        scale: 1;
     }
 }
 
@@ -461,14 +516,14 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 7px;
 }
 
 .container .project-section .projects .card .card-btns .code{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 7px;
 }
 
 
@@ -665,6 +720,7 @@ html {
 
     &::placeholder {
         color: gray;
+        font-family: monospace;
     }
 }
 
