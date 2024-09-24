@@ -80,10 +80,47 @@ function sideBarHide() {
     sideBar.style.translate = "-100%";
 }
 
+
+let fetchData = async () => {
+
+    let data = await fetch('../productData.json');
+    let response = await data.json();
+
+    // console.log(response)
+    return response
+    
+}
+
+async function amazonAffiliateProductShow() {
+
+    let fetchedData = await fetchData()
+
+    let cardContainer = document.querySelector('.product-cards');
+
+    fetchedData.forEach((element) => {
+        cardContainer.innerHTML = cardContainer.innerHTML + `<div class="product-card" data-link = "${element.productAffiliateLink}">
+                    <img class="product-image" src="${element.productImage}" alt="Product Image">
+                    <h2 class="product-title">${element.productTitle}</h2>
+                    <div class="product-price">$USD: ${element.productPrice}</div>
+                    <button class="view-more">View More Details</button>
+                </div>`
+    })
+
+    let cards = document.querySelectorAll('.product-card');
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            let affLink = card.getAttribute('data-link')
+            window.open(affLink, '__blank')
+        })
+    })    
+}
+
+
+
 function main() {
     projectCard();
-
     reviewCard();
+    amazonAffiliateProductShow()
 }
 
 main();
