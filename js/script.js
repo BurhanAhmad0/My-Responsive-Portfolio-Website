@@ -81,46 +81,36 @@ function sideBarHide() {
 }
 
 
-let fetchData = async () => {
+const contactForm = () => {
+    let form = document.getElementById('contact-form')
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault()  // Prevents form from submitting
 
-    let data = await fetch('../productData.json');
-    let response = await data.json();
+        // Access the form values
+        let email = form.elements['email'].value // Get value of input with name 'email'
+        let description = form.elements['description'].value // Get value of input with name 'message'
 
-    // console.log(response)
-    return response
-    
-}
+        let data = {
+            email,
+            description
+        }
+        
+        let response = await fetch('http://127.0.0.1:3000/', {
+            method: "POST",
+            body: JSON.stringify(data),
 
-async function amazonAffiliateProductShow() {
-
-    let fetchedData = await fetchData()
-
-    let cardContainer = document.querySelector('.product-cards');
-
-    fetchedData.forEach((element) => {
-        cardContainer.innerHTML = cardContainer.innerHTML + `<div class="product-card" data-link = "${element.productAffiliateLink}">
-                    <img class="product-image" src="${element.productImage}" alt="Product Image">
-                    <h2 class="product-title">${element.productTitle}</h2>
-                    <div class="product-price">$USD: ${element.productPrice}</div>
-                    <button class="view-more">View More Details</button>
-                </div>`
-    })
-
-    let cards = document.querySelectorAll('.product-card');
-    cards.forEach((card) => {
-        card.addEventListener("click", () => {
-            let affLink = card.getAttribute('data-link')
-            window.open(affLink, '__blank')
+            headers: {
+                "Content-Type": "application/json",
+            },
         })
-    })    
+        console.log(response)
+    })
 }
-
-
 
 function main() {
     projectCard();
     reviewCard();
-    amazonAffiliateProductShow()
+    contactForm()
 }
 
 main();
